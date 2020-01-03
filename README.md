@@ -1,2 +1,2 @@
 # js-data-structure
-A JavaScript libarary for data structures
+A JavaScript library for data structures
