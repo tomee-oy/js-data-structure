@@ -1,0 +1,54 @@
+Arguments: 
+  /Users/ouyangdecai/.nvm/versions/node/v11.2.0/bin/node /usr/local/Cellar/yarn/1.10.1/libexec/bin/yarn.js
+
+PATH: 
+  /Users/ouyangdecai/flutter/bin:/Users/ouyangdecai/.nvm/versions/node/v11.2.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/ouyangdecai/bin
+
+Yarn version: 
+  1.10.1
+
+Node version: 
+  11.2.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/ouyangdecai/workspace/js-data-structure/package.json: Unexpected token } in JSON at position 583
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.10.1/libexec/lib/cli.js:1136:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.10.1/libexec/lib/cli.js:98:30)
+      at /usr/local/Cellar/yarn/1.10.1/libexec/lib/cli.js:109:13
+
+npm manifest: 
+  {
+    "name": "js-data-structure",
+    "version": "1.0.0",
+    "description": "A JavaScript library for data structure",
+    "main": "dist/index.js",
+    "scripts": {
+      "test": "father test"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/tomee-oy/js-data-structure.git"
+    },
+    "keywords": [
+      "js",
+      "data-structure"
+    ],
+    "author": "tomee",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/tomee-oy/js-data-structure/issues"
+    },
+    "homepage": "https://github.com/tomee-oy/js-data-structure#readme",
+    "pre-commit": ["eslint", "prettier"],
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

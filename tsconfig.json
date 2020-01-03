@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "typeRoots": ["./node_modules/@types/", "./typing.d.ts"],
+  },
+  "exclude": ["node_modules"],
+}

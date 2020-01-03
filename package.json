@@ -1,0 +1,25 @@
+{
+  "name": "js-data-structure",
+  "version": "1.0.0",
+  "description": "A JavaScript library for data structure",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "father build --esm --cjs src/index.ts",
+    "test": "father test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomee-oy/js-data-structure.git"
+  },
+  "keywords": [
+    "js",
+    "data-structure"
+  ],
+  "author": "tomee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tomee-oy/js-data-structure/issues"
+  },
+  "homepage": "https://github.com/tomee-oy/js-data-structure#readme",
+  "pre-commit": ["eslint", "prettier"]
+}
