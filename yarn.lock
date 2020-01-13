@@ -16174,6 +16174,13 @@ rmc-feedback@^2.0.0:
     babel-runtime "6.x"
     classnames "^2.2.5"
 
+rollup-plugin-alias@^2.2.0:
+  version "2.2.0"
+  resolved "http://172.16.11.82:4873/rollup-plugin-alias/-/rollup-plugin-alias-2.2.0.tgz#5004a2bc542a2eebb45b5a0fff8c6f540439decc"
+  integrity sha1-UASivFQqLuu0W1oP/4xvVAQ53sw=
+  dependencies:
+    slash "^3.0.0"
+
 rollup-plugin-babel@4.3.3:
   version "4.3.3"
   resolved "http://172.16.11.82:4873/rollup-plugin-babel/-/rollup-plugin-babel-4.3.3.tgz#7eb5ac16d9b5831c3fd5d97e8df77ba25c72a2aa"

@@ -7,6 +7,11 @@
     "sourceMap": true,
     "target": "ES6",
     "typeRoots": ["./node_modules/@types/", "./typing.d.ts"],
+    "baseUrl": "./",
+    "paths": {
+      "@src/*": ["src/*"],
+      "@util": ["util.ts"]
+    },
   },
   "exclude": ["node_modules"]
 }

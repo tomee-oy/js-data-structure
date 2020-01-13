@@ -1,7 +1,9 @@
 
 export default {
   entry: 'src/index.ts',
-  esm: 'rollup',
+  esm: {
+    type: 'rollup',
+  },
   cjs: {
     type: 'rollup',
     lazy: true,

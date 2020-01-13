@@ -1,5 +1,5 @@
-import List from './index.ts'
-import { create } from '../../util'
+import List from '../src/List/index'
+import { create } from '../util'
 
 let initArray = [1, false, { name: 'test', value: 232 }, 'xxx']
 let list;
@@ -66,8 +66,8 @@ test('列表hasNext方法测试', () => {
   expect(list.hasNext()).toBeTruthy()
 })
 
-test('列表getCurrPosition方法测试', () => {
-  expect(list.getCurrPosition()).toBe(0)
+test('列表getCurrentPos方法测试', () => {
+  expect(list.getCurrentPos()).toBe(0)
 })
 
 test('列表find方法测试', () => {
@@ -80,26 +80,26 @@ test('列表contains方法测试', () => {
 
 test('列表moveTo方法测试', () => {
   list.moveTo(2)
-  expect(list.getCurrPosition()).toBe(2)
+  expect(list.getCurrentPos()).toBe(2)
 })
 
 test('列表prev方法测试', () => {
   list.moveTo(2)
   list.prev()
-  expect(list.getCurrPosition()).toBe(1)
+  expect(list.getCurrentPos()).toBe(1)
 })
 
 test('列表next方法测试', () => {
   list.next()
-  expect(list.getCurrPosition()).toBe(1)
+  expect(list.getCurrentPos()).toBe(1)
 })
 
 test('列表front方法测试', () => {
   list.front()
-  expect(list.getCurrPosition()).toBe(0)
+  expect(list.getCurrentPos()).toBe(0)
 })
 
 test('列表end方法测试', () => {
   list.end()
-  expect(list.getCurrPosition()).toBe(3)
+  expect(list.getCurrentPos()).toBe(3)
 })

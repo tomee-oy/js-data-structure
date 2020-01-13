@@ -50,7 +50,7 @@ class List implements IList{
     return true
   }
   // 返回当前位置
-  public getCurrPosition(): number {
+  public getCurrentPos(): number {
     return this.position
   }
   // 获取列表元素个数
