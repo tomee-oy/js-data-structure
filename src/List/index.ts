@@ -36,7 +36,7 @@ class List implements IList{
   public remove(startPos: number, endPos: number): any[] | Error {
     if (startPos < 0) startPos = this.length + startPos
     if (endPos < 0) endPos = this.length + endPos
-    if (startPos > endPos) return new Error('开始位置不能大于结束位置')
+    if (startPos > endPos) throw new Error('开始位置不能大于结束位置')
     return this.store.splice(startPos, endPos - startPos)
   }
   // 判断是否是第一个元素
@@ -50,7 +50,7 @@ class List implements IList{
     return true
   }
   // 返回当前位置
-  public getCurrentPos(): number {
+  public getCurrPosition(): number {
     return this.position
   }
   // 获取列表元素个数
@@ -77,7 +77,7 @@ class List implements IList{
   // 将当前位置后移一位
   public next(): void{
     if (this.position === this.length - 1) return
-    this.position = this.position - 1
+    this.position = this.position + 1
   }
   // 将位置移到第一位
   public front(): void {

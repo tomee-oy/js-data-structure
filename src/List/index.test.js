@@ -1,11 +1,12 @@
 import List from './index.ts'
 import { create } from '../../util'
 
-const initArray = [1, false, { name: 'test', value: 232 }, 'xxx'];
+let initArray = [1, false, { name: 'test', value: 232 }, 'xxx']
 let list;
 
 // 每次执行test之前都会重置list的值，防止上次测试修改了原数组
 beforeEach(() => {
+  initArray = [1, false, { name: 'test', value: 232 }, 'xxx']
   list = create(List, initArray)
 })
 
@@ -40,19 +41,21 @@ test('列表append方法测试', () => {
 })
 
 test('列表remove方法参数为正数测试', () => {
-  const result = [...initArray].splice(2, 2)
+  const result = [...initArray]
+  result.splice(2, 2)
   list.remove(2, 4)
   expect(list.toString()).toEqual(result.join(','))
 })
 
 test('列表remove方法参数为负数测试', () => {
-  const result = [...initArray].splice(2, 1)
+  const result = [...initArray]
+  result.splice(2, 1)
   list.remove(2, -1)
   expect(list.toString()).toEqual(result.join(','))
 })
 
 test('列表remove方法参数无效测试', () => {
-  expect(list.remove(-12, -33)).toThrow('remove方法参数无效')
+  expect(list.remove.bind(null, -12, -33)).toThrow()
 })
 
 test('列表hasPrev方法测试', () => {
@@ -60,11 +63,11 @@ test('列表hasPrev方法测试', () => {
 })
 
 test('列表hasNext方法测试', () => {
-  expect(list.hasPrev()).toBeTruthy()
+  expect(list.hasNext()).toBeTruthy()
 })
 
-test('列表getCurrentPos方法测试', () => {
-  expect(list.getCurrentPos()).toBe(0)
+test('列表getCurrPosition方法测试', () => {
+  expect(list.getCurrPosition()).toBe(0)
 })
 
 test('列表find方法测试', () => {
@@ -77,25 +80,26 @@ test('列表contains方法测试', () => {
 
 test('列表moveTo方法测试', () => {
   list.moveTo(2)
-  expect(list.getCurrentPos()).toBe(2)
+  expect(list.getCurrPosition()).toBe(2)
 })
 
 test('列表prev方法测试', () => {
   list.moveTo(2)
-  expect(list.prev()).toBe(1)
+  list.prev()
+  expect(list.getCurrPosition()).toBe(1)
 })
 
 test('列表next方法测试', () => {
-  list.moveTo(2)
-  expect(list.next()).toBe(3)
+  list.next()
+  expect(list.getCurrPosition()).toBe(1)
 })
 
 test('列表front方法测试', () => {
   list.front()
-  expect(list.getCurrentPos()).toBe(0)
+  expect(list.getCurrPosition()).toBe(0)
 })
 
 test('列表end方法测试', () => {
   list.end()
-  expect(list.getCurrentPos()).toBe(3)
+  expect(list.getCurrPosition()).toBe(3)
 })
