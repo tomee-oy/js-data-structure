@@ -1,3 +1,4 @@
 language: JavaScript
+node: 13.5.0
 install: yarn
 script: npm run test
