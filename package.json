@@ -28,14 +28,8 @@
   ],
   "dependencies": {
     "father": "^2.29.1",
-    "gatsby": "^2.18.22",
-    "gatsby-theme-docz": "^2.2.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
-  },
-  "resolutions": {
-    "minipass": "2.7.0",
-    "sharp": "^0.23.0"
   },
   "devDependencies": {
     "docz-theme-ztopia": "^0.1.3"
